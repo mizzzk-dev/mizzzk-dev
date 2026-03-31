@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  =========================================
+  divider.svg
+  セクション区切り用の細いアニメーションライン
+  - READMEの区切りまで自作にすることでテンプレ感を消す
+  - 主張しすぎない細い光だけを動かす
+  =========================================
+-->
+<svg width="1200" height="36" viewBox="0 0 1200 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="animated divider">
+  <defs>
+    <linearGradient id="base" x1="0" y1="18" x2="1200" y2="18" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#334155" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#475569" stop-opacity="0.45"/>
+      <stop offset="75%" stop-color="#334155" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="pulse" x1="0" y1="18" x2="220" y2="18" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- ベースライン -->
+  <rect x="60" y="17" width="1080" height="2" rx="999" fill="url(#base)"/>
+
+  <!-- 動く光 -->
+  <g>
+    <rect x="120" y="16" width="220" height="4" rx="999" fill="url(#pulse)" filter="url(#glow)">
+      <animate attributeName="x" values="60;920;60" dur="7s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- 中央の小さい光点 -->
+  <circle cx="600" cy="18" r="2.2" fill="#8b5cf6">
+    <animate attributeName="r" values="1.6;2.6;1.6" dur="2.4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.45;1;0.45" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+</svg>
