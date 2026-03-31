@@ -1,57 +1,67 @@
 <!-- =========================================
   GitHub Profile README for mizzzk-dev
-  そのまま使える完全版
-  X / Zenn / Portfolio のURLだけ差し替えればOK
+  個人開発 + 駆け出しフリーランス寄りの完全版
+  URLだけ差し替えればそのまま使える
 ========================================= -->
 
 <p align="center">
   <img
-    src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0f172a,30:1e293b,65:334155,100:7c3aed&text=mizzzk-dev&fontColor=ffffff&fontSize=42&fontAlignY=38&desc=Frontend-focused%20Full%20Stack%20Developer&descAlignY=58&animation=fadeIn"
+    src="https://capsule-render.vercel.app/api?type=waving&height=260&color=0:0b1020,30:111827,60:1f2937,100:7c3aed&text=mizzzk-dev&fontColor=ffffff&fontSize=42&fontAlignY=38&desc=Frontend-focused%20Full%20Stack%20Developer%20%7C%20Freelance%20Beginner&descAlignY=58&animation=fadeIn"
     alt="header"
   />
 </p>
 
 <p align="center">
-  <b>React / Next.js を軸に、UI からバックエンドまで一気通貫でつくる個人開発エンジニア</b>
+  <b>React / Next.js を軸に、UIから実装までつなぐフロントエンド寄りのフルスタック開発者</b>
 </p>
 
 <p align="center">
-  使いやすくて気持ちいい Web 体験をつくるのが好きです。<br />
-  フロントエンドの表現と実装を中心に、必要に応じて API・Bot・運用まで触っています。<br />
-  最近は <b>Discord Bot 開発</b> と <b>個人サイト制作</b> を進めています。
+  個人開発を続けながら、フリーランスとして小さく実績を積み上げています。<br />
+  使いやすくて気持ちいい Web 体験づくりが好きで、<br />
+  フロントエンドを中心に、必要に応じて API・Bot・運用まで触っています。
 </p>
 
 <p align="center">
+  <a href="mailto:your_mail@example.com">
+    <img src="https://img.shields.io/badge/Contact-Email-111827?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://x.com/your_id">
+    <img src="https://img.shields.io/badge/X-DM%20Open-000000?style=for-the-badge&logo=x&logoColor=white" />
+  </a>
   <img src="https://komarev.com/ghpvc/?username=mizzzk-dev&label=PROFILE%20VIEWS&color=8b5cf6&style=for-the-badge" alt="profile views" />
 </p>
 
 ---
 
-## 𝐀𝐛𝐨𝐮𝐭 𝐌𝐞
+## 𝑨𝒃𝒐𝒖𝒕 𝑴𝒆
+
+<p align="center">
+  <i>“見た目が良い”だけで終わらず、実際に使いやすいプロダクトをつくることを大事にしています。</i>
+</p>
 
 <table>
   <tr>
-    <td width="60%" valign="top">
+    <td width="58%" valign="top">
 
-### ✦ スタイル
-- フロントエンド寄りのフルスタック
-- 個人開発中心
-- UI / UX を意識した設計と実装
-- 「見た目がいい」だけで終わらないプロダクト志向
+### ✦ 取り組んでいること
+- React / Next.js を中心にした個人開発
+- Discord Bot の開発
+- 個人サイトの制作と改善
+- フリーランスとしての実績づくり
 
-### ✦ 今やっていること
-- Discord Bot 開発
-- 個人サイトの改善
-- React / Next.js ベースのプロダクトづくり
+### ✦ 得意なこと
+- モダンなフロントエンド実装
+- UI を意識した画面設計
+- 小規模サービスの立ち上げ
+- フロントから公開まで一通りつなぐ開発
 
-### ✦ 興味があること
-- モダンフロントエンド
-- パフォーマンス改善
-- 開発体験のよい UI 設計
-- 継続的に育てられる個人開発
+### ✦ いまのスタンス
+- 小規模案件・相談ベースのご連絡歓迎
+- 実装を通して着実に経験を積みたいフェーズ
+- ひとつひとつ丁寧に進めるスタイル
 
   </td>
-    <td width="40%" valign="top">
+    <td width="42%" valign="top">
 
 <p align="center">
   <img
@@ -67,7 +77,7 @@
 
 ---
 
-## 𝐒𝐤𝐢𝐥𝐥 𝐒𝐞𝐭
+## 𝑺𝒌𝒊𝒍𝒍 𝑺𝒆𝒕
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=react,nextjs,ts,js,nodejs,html,css,tailwind,firebase,supabase,vercel,figma,git,github,vscode&theme=dark" />
@@ -75,13 +85,29 @@
 
 <p align="center">
   <sub>
-    Frontend を主軸にしつつ、必要なバックエンド・BaaS・デプロイまで自分でつなぐ構成が得意です。
+    フロントエンドを主軸にしつつ、必要なバックエンド・BaaS・デプロイまで自分でつなぐ開発が好きです。
   </sub>
 </p>
 
 ---
 
-## 𝐆𝐢𝐭𝐇𝐮𝐛 𝐀𝐜𝐭𝐢𝐯𝐢𝐭𝐲
+## 𝑾𝒉𝒂𝒕 𝑰 𝑪𝒂𝒏 𝑯𝒆𝒍𝒑 𝑾𝒊𝒕𝒉
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Landing%20Page-Implementation-1f2937?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Website-UI%20Build-0f172a?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Small%20Web%20App-Development-4c1d95?style=for-the-badge&logo=vercel&logoColor=white" />
+  <img src="https://img.shields.io/badge/Discord%20Bot-Creation-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
+</p>
+
+<p align="center">
+  LP制作 / コーポレートサイトのUI実装 / 小規模Webアプリ / Discord Bot など、<br />
+  フロントエンド中心の制作や開発相談に関心があります。
+</p>
+
+---
+
+## 𝑮𝒊𝒕𝑯𝒖𝒃 𝑨𝒄𝒕𝒊𝒗𝒊𝒕𝒚
 
 <p align="center">
   <img
@@ -98,7 +124,7 @@
 
 <p align="center">
   <img
-    src="https://github-profile-trophy.vercel.app/?username=mizzzk-dev&theme=onedark&no-frame=true&no-bg=true&margin-w=10&row=1"
+    src="https://github-profile-trophy.vercel.app/?username=mizzzk-dev&theme=algolia&no-frame=true&no-bg=true&margin-w=10&row=1"
     width="100%"
     alt="trophy"
   />
@@ -106,17 +132,17 @@
 
 ---
 
-## 𝐂𝐮𝐫𝐫𝐞𝐧𝐭𝐥𝐲 𝐁𝐮𝐢𝐥𝐝𝐢𝐧𝐠
+## 𝑪𝒖𝒓𝒓𝒆𝒏𝒕𝒍𝒚 𝑩𝒖𝒊𝒍𝒅𝒊𝒏𝒈
 
 <p align="center">
   <img src="https://img.shields.io/badge/Discord%20Bot-Building-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
   <img src="https://img.shields.io/badge/Personal%20Site-In%20Progress-111827?style=for-the-badge&logo=vercel&logoColor=white" />
-  <img src="https://img.shields.io/badge/React%20%2F%20Next.js-Main%20Stack-0f172a?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Freelance-Starting%20Out-7c3aed?style=for-the-badge&logo=githubsponsors&logoColor=white" />
 </p>
 
 ---
 
-## 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐝 𝐏𝐫𝐨𝐣𝐞𝐜𝐭
+## 𝑭𝒆𝒂𝒕𝒖𝒓𝒆𝒅 𝑷𝒓𝒐𝒋𝒆𝒄𝒕
 
 <p align="center">
   <a href="https://github.com/mizzzk-dev/lunaria">
@@ -129,13 +155,23 @@
 
 <p align="center">
   <b>Lunaria</b><br />
-  個人開発で育てているプロジェクト。<br />
-  UI の見やすさと触り心地を意識しながら、実装と改善を継続しています。
+  個人開発で継続して育てているプロジェクト。<br />
+  デザイン・実装・改善の流れを回しながら、プロダクトとして磨いています。
 </p>
 
 ---
 
-## 𝐋𝐢𝐧𝐤𝐬
+## 𝑭𝒓𝒆𝒆𝒍𝒂𝒏𝒄𝒆 𝑵𝒐𝒕𝒆
+
+<p align="center">
+  現在は駆け出しのフリーランスとして、<br />
+  小規模な制作・実装・開発相談を中心に経験を積んでいます。<br />
+  スピードだけでなく、丁寧なコミュニケーションと着実な進行を大切にしています。
+</p>
+
+---
+
+## 𝑳𝒊𝒏𝒌𝒔
 
 <p align="center">
   <a href="https://github.com/mizzzk-dev">
@@ -150,12 +186,15 @@
   <a href="https://your-portfolio.com">
     <img src="https://img.shields.io/badge/Portfolio-Visit-4c1d95?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
+  <a href="mailto:your_mail@example.com">
+    <img src="https://img.shields.io/badge/Email-Contact-0f172a?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
 </p>
 
 ---
 
 <p align="center">
   <sub>
-    Thanks for stopping by.
+    Building carefully, learning continuously, and shipping one step at a time.
   </sub>
 </p>
