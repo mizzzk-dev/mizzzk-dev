@@ -1,195 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  =========================================
+  ==========================================================
   hero.svg
-  GitHubプロフィール冒頭用の自作アニメーションSVG
-  - テンプレ感を消すため、よくあるTyping SVGは使わない
-  - 暗めの背景 + 発光 + 軌道 + スキャンラインで作品感を出す
-  - テキストは mizzzk-dev の世界観に寄せて最小限にする
-  =========================================
+  GitHub Profile README の先頭で表示するオリジナルヒーロー
+
+  目的:
+  - テンプレ感を避け、プロフィール全体を「作品ページ」化する
+  - 紫 / 青 / 黒 を軸に、上品な発光で落ち着いた未来感を作る
+  - UI起点で platform / dashboard / bot / backend / tool を繋ぐ人物像を示す
+
+  実装方針:
+  - 外部依存なし（純粋な SVG のみ）
+  - アニメーションは遅め・軽量
+  - README 上で潰れにくい文字サイズ
+  - コメントを多めに残し、後から調整しやすくする
+  ==========================================================
 -->
-<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="mizzzk-dev animated hero">
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="mizzzk-dev hero">
   <defs>
-    <!-- 背景グラデーション -->
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#060816"/>
-      <stop offset="45%" stop-color="#0f172a"/>
-      <stop offset="100%" stop-color="#111827"/>
+    <!-- 背景: 左上から右下へ静かに流れる濃淡 -->
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#04060f"/>
+      <stop offset="45%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#0c1326"/>
     </linearGradient>
 
-    <!-- 発光用グラデーション -->
-    <radialGradient id="glow-violet" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.9"/>
+    <!-- 補助グロー（紫） -->
+    <radialGradient id="violet-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.85"/>
       <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
     </radialGradient>
 
-    <radialGradient id="glow-blue" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+    <!-- 補助グロー（青） -->
+    <radialGradient id="blue-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.70"/>
       <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- 細いラインの光 -->
-    <linearGradient id="line-grad" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+    <!-- 線の発光（走査線や軌道に使う） -->
+    <linearGradient id="line-neon" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
-      <stop offset="20%" stop-color="#38bdf8" stop-opacity="0.0"/>
-      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.9"/>
-      <stop offset="80%" stop-color="#38bdf8" stop-opacity="0.0"/>
+      <stop offset="45%" stop-color="#60a5fa" stop-opacity="0.1"/>
+      <stop offset="52%" stop-color="#a78bfa" stop-opacity="0.92"/>
+      <stop offset="60%" stop-color="#60a5fa" stop-opacity="0.1"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- 右側カード用のガラス風グラデーション -->
-    <linearGradient id="glass" x1="0" y1="0" x2="320" y2="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03"/>
-    </linearGradient>
-
-    <!-- グリッドパターン -->
-    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
-      <path d="M 28 0 L 0 0 0 28" stroke="#94a3b8" stroke-opacity="0.08" stroke-width="1"/>
+    <!-- 薄いグリッド -->
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#93c5fd" stroke-opacity="0.08" stroke-width="1"/>
     </pattern>
 
-    <!-- ぼかし -->
-    <filter id="blur-xl" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="28"/>
+    <!-- ガラスカード用グラデーション -->
+    <linearGradient id="glass" x1="0" y1="0" x2="380" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- 大きめぼかし -->
+    <filter id="blur-lg" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="24"/>
     </filter>
 
-    <filter id="blur-md" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="12"/>
+    <!-- 小さめぼかし -->
+    <filter id="blur-sm" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
     </filter>
 
-    <!-- 軽い影 -->
+    <!-- カードの影 -->
     <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
-      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#000000" flood-opacity="0.35"/>
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#020617" flood-opacity="0.6"/>
     </filter>
   </defs>
 
-  <!-- 背景 -->
-  <rect width="1200" height="320" fill="url(#bg)"/>
+  <!-- 背景とグリッド -->
+  <rect width="1200" height="360" fill="url(#bg-grad)"/>
+  <rect width="1200" height="360" fill="url(#grid)"/>
 
-  <!-- グリッド -->
-  <rect width="1200" height="320" fill="url(#grid)"/>
-
-  <!-- 左上の大きい発光 -->
-  <circle cx="210" cy="70" r="130" fill="url(#glow-violet)" filter="url(#blur-xl)" opacity="0.55">
-    <animate attributeName="cx" values="210;250;210" dur="14s" repeatCount="indefinite"/>
-    <animate attributeName="cy" values="70;100;70" dur="12s" repeatCount="indefinite"/>
+  <!-- 背景のゆるい光源（動きは遅く、主張しすぎない） -->
+  <circle cx="210" cy="92" r="170" fill="url(#violet-glow)" filter="url(#blur-lg)" opacity="0.42">
+    <animate attributeName="cx" values="210;250;210" dur="18s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="92;120;92" dur="16s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- 左下の青発光 -->
-  <circle cx="320" cy="260" r="120" fill="url(#glow-blue)" filter="url(#blur-xl)" opacity="0.38">
-    <animate attributeName="cx" values="320;280;320" dur="16s" repeatCount="indefinite"/>
-    <animate attributeName="cy" values="260;230;260" dur="11s" repeatCount="indefinite"/>
+  <circle cx="360" cy="300" r="140" fill="url(#blue-glow)" filter="url(#blur-lg)" opacity="0.36">
+    <animate attributeName="cx" values="360;320;360" dur="20s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="300;264;300" dur="15s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- 右側にも発光を置いて左右の密度を合わせる -->
-  <circle cx="980" cy="120" r="110" fill="url(#glow-violet)" filter="url(#blur-xl)" opacity="0.28">
-    <animate attributeName="cx" values="980;1010;980" dur="13s" repeatCount="indefinite"/>
-    <animate attributeName="cy" values="120;140;120" dur="10s" repeatCount="indefinite"/>
+  <circle cx="1010" cy="110" r="130" fill="url(#violet-glow)" filter="url(#blur-lg)" opacity="0.22">
+    <animate attributeName="cx" values="1010;1038;1010" dur="19s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="110;142;110" dur="17s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- 走査線。近未来感を出す -->
-  <rect x="0" y="0" width="1200" height="2" fill="url(#line-grad)" opacity="0.7">
-    <animate attributeName="y" values="0;320;0" dur="8s" repeatCount="indefinite"/>
+  <!-- 走査線: 未来感を出すが、速すぎない -->
+  <rect x="0" y="0" width="1200" height="2" fill="url(#line-neon)" opacity="0.65">
+    <animate attributeName="y" values="0;360;0" dur="10s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- 左の情報ブロック -->
-  <g transform="translate(74 78)">
+  <!-- 左側のメイン情報 -->
+  <g transform="translate(72 80)">
     <!-- 小さなラベル -->
-    <text x="0" y="0" fill="#a5b4fc" font-size="14" font-family="Segoe UI, Inter, Arial, sans-serif" letter-spacing="3">
-      FRONTEND-FOCUSED / FULL STACK / FREELANCE BEGINNER
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="4s" repeatCount="indefinite"/>
+    <text x="0" y="0" fill="#a5b4fc" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" letter-spacing="3">
+      FRONTEND-FOCUSED / PRODUCT BUILDER
+      <animate attributeName="opacity" values="0.72;1;0.72" dur="5s" repeatCount="indefinite"/>
     </text>
 
-    <!-- メイン名 -->
-    <text x="0" y="68" fill="#f8fafc" font-size="54" font-weight="700" font-family="Segoe UI, Inter, Arial, sans-serif">
+    <!-- 名前 -->
+    <text x="0" y="70" fill="#f8fafc" font-size="56" font-weight="700" font-family="Inter,Segoe UI,Arial,sans-serif">
       mizzzk-dev
     </text>
 
-    <!-- サブコピー -->
-    <text x="0" y="104" fill="#cbd5e1" font-size="19" font-family="Segoe UI, Inter, Arial, sans-serif">
-      crafting UI-first products with React / Next.js
+    <!-- 短い説明（英字） -->
+    <text x="0" y="108" fill="#cbd5e1" font-size="19" font-family="Inter,Segoe UI,Arial,sans-serif">
+      UI-first web products, from dashboard to backend foundation
     </text>
 
-    <!-- 日本語の説明 -->
-    <text x="0" y="142" fill="#94a3b8" font-size="16" font-family="Segoe UI, Inter, Arial, sans-serif">
-      個人開発を続けながら、小さな案件や実装相談にも向き合い始めた開発者
+    <!-- 短い説明（日本語） -->
+    <text x="0" y="144" fill="#93a4bf" font-size="16" font-family="Inter,Segoe UI,Arial,sans-serif">
+      React / Next.js を軸に、API・Bot・Worker・CMS までつないで実装
     </text>
 
-    <!-- 下線。静かに動かしてテンプレ感を消す -->
-    <rect x="0" y="170" width="220" height="3" rx="999" fill="#8b5cf6" opacity="0.9">
-      <animate attributeName="width" values="180;250;180" dur="5.5s" repeatCount="indefinite"/>
+    <!-- アンダーライン（ゆっくり伸縮） -->
+    <rect x="0" y="170" width="280" height="3" rx="999" fill="#8b5cf6" opacity="0.9">
+      <animate attributeName="width" values="210;340;240;280" dur="7s" repeatCount="indefinite"/>
     </rect>
 
-    <!-- 小さなチップ風ラベル -->
-    <g transform="translate(0 196)">
-      <rect x="0" y="0" width="110" height="28" rx="14" fill="#0f172a" stroke="#8b5cf6" stroke-opacity="0.45"/>
-      <text x="20" y="19" fill="#e2e8f0" font-size="13" font-family="Segoe UI, Inter, Arial, sans-serif">discord bot</text>
+    <!-- ドメインチップ: 入れすぎず5要素 -->
+    <g transform="translate(0 198)">
+      <rect x="0" y="0" width="104" height="30" rx="15" fill="#0b1222" stroke="#8b5cf6" stroke-opacity="0.45"/>
+      <text x="22" y="20" fill="#e2e8f0" font-size="13" font-family="Inter,Segoe UI,Arial,sans-serif">web app</text>
     </g>
 
-    <g transform="translate(122 196)">
-      <rect x="0" y="0" width="104" height="28" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-opacity="0.45"/>
-      <text x="21" y="19" fill="#e2e8f0" font-size="13" font-family="Segoe UI, Inter, Arial, sans-serif">portfolio</text>
+    <g transform="translate(116 198)">
+      <rect x="0" y="0" width="112" height="30" rx="15" fill="#0b1222" stroke="#60a5fa" stroke-opacity="0.45"/>
+      <text x="20" y="20" fill="#e2e8f0" font-size="13" font-family="Inter,Segoe UI,Arial,sans-serif">dashboard</text>
     </g>
 
-    <g transform="translate(238 196)">
-      <rect x="0" y="0" width="126" height="28" rx="14" fill="#0f172a" stroke="#a78bfa" stroke-opacity="0.45"/>
-      <text x="18" y="19" fill="#e2e8f0" font-size="13" font-family="Segoe UI, Inter, Arial, sans-serif">small freelance</text>
+    <g transform="translate(240 198)">
+      <rect x="0" y="0" width="116" height="30" rx="15" fill="#0b1222" stroke="#818cf8" stroke-opacity="0.45"/>
+      <text x="20" y="20" fill="#e2e8f0" font-size="13" font-family="Inter,Segoe UI,Arial,sans-serif">discord bot</text>
+    </g>
+
+    <g transform="translate(368 198)">
+      <rect x="0" y="0" width="112" height="30" rx="15" fill="#0b1222" stroke="#60a5fa" stroke-opacity="0.45"/>
+      <text x="24" y="20" fill="#e2e8f0" font-size="13" font-family="Inter,Segoe UI,Arial,sans-serif">go backend</text>
+    </g>
+
+    <g transform="translate(492 198)">
+      <rect x="0" y="0" width="102" height="30" rx="15" fill="#0b1222" stroke="#a78bfa" stroke-opacity="0.45"/>
+      <text x="24" y="20" fill="#e2e8f0" font-size="13" font-family="Inter,Segoe UI,Arial,sans-serif">editor</text>
     </g>
   </g>
 
-  <!-- 右側の円軌道 -->
+  <!-- 右側の軌道表現: 「設計している人」感を抽象表現 -->
   <g>
-    <circle cx="960" cy="152" r="88" stroke="#8b5cf6" stroke-opacity="0.25" stroke-width="1.2"/>
-    <circle cx="960" cy="152" r="116" stroke="#38bdf8" stroke-opacity="0.14" stroke-width="1"/>
+    <circle cx="960" cy="150" r="96" stroke="#8b5cf6" stroke-opacity="0.23" stroke-width="1.2"/>
+    <circle cx="960" cy="150" r="126" stroke="#38bdf8" stroke-opacity="0.16" stroke-width="1"/>
+
     <g>
-      <animateTransform attributeName="transform" type="rotate" from="0 960 152" to="360 960 152" dur="13s" repeatCount="indefinite"/>
-      <circle cx="1048" cy="152" r="4.5" fill="#8b5cf6"/>
-      <circle cx="1048" cy="152" r="10" fill="#8b5cf6" opacity="0.18" filter="url(#blur-md)"/>
+      <animateTransform attributeName="transform" type="rotate" from="0 960 150" to="360 960 150" dur="14s" repeatCount="indefinite"/>
+      <circle cx="1056" cy="150" r="4.6" fill="#8b5cf6"/>
+      <circle cx="1056" cy="150" r="10" fill="#8b5cf6" opacity="0.2" filter="url(#blur-sm)"/>
     </g>
+
     <g>
-      <animateTransform attributeName="transform" type="rotate" from="360 960 152" to="0 960 152" dur="18s" repeatCount="indefinite"/>
-      <circle cx="844" cy="152" r="4.5" fill="#38bdf8"/>
-      <circle cx="844" cy="152" r="10" fill="#38bdf8" opacity="0.16" filter="url(#blur-md)"/>
+      <animateTransform attributeName="transform" type="rotate" from="360 960 150" to="0 960 150" dur="20s" repeatCount="indefinite"/>
+      <circle cx="834" cy="150" r="4.6" fill="#38bdf8"/>
+      <circle cx="834" cy="150" r="10" fill="#38bdf8" opacity="0.18" filter="url(#blur-sm)"/>
     </g>
   </g>
 
-  <!-- 右下のガラス風カード -->
-  <g transform="translate(786 168)" filter="url(#shadow)">
-    <rect x="0" y="0" width="300" height="104" rx="22" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.12"/>
-    <text x="26" y="30" fill="#f8fafc" font-size="15" font-family="Segoe UI, Inter, Arial, sans-serif">current focus</text>
+  <!-- 右下ガラスカード: 直近の主戦場を軽く表示 -->
+  <g transform="translate(754 186)" filter="url(#shadow)">
+    <rect x="0" y="0" width="360" height="126" rx="22" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.13"/>
+    <text x="28" y="34" fill="#f8fafc" font-size="15" font-family="Inter,Segoe UI,Arial,sans-serif">current lanes</text>
 
-    <text x="26" y="58" fill="#cbd5e1" font-size="14" font-family="Segoe UI, Inter, Arial, sans-serif">build / refine / ship</text>
+    <text x="28" y="62" fill="#cbd5e1" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif">platform / dashboard / bot / api / worker</text>
 
-    <!-- 動くバーで静かなアニメーションを追加 -->
-    <rect x="26" y="74" width="70" height="6" rx="999" fill="#1e293b"/>
-    <rect x="26" y="74" width="46" height="6" rx="999" fill="#8b5cf6">
-      <animate attributeName="width" values="30;62;46;54;30" dur="6s" repeatCount="indefinite"/>
+    <!-- 3本のバーで動きを作る（静かに） -->
+    <rect x="28" y="82" width="86" height="6" rx="999" fill="#1e293b"/>
+    <rect x="28" y="82" width="58" height="6" rx="999" fill="#8b5cf6">
+      <animate attributeName="width" values="36;70;58;64;36" dur="7s" repeatCount="indefinite"/>
     </rect>
 
-    <rect x="108" y="74" width="70" height="6" rx="999" fill="#1e293b"/>
-    <rect x="108" y="74" width="40" height="6" rx="999" fill="#38bdf8">
-      <animate attributeName="width" values="20;58;36;52;20" dur="5.5s" repeatCount="indefinite"/>
+    <rect x="132" y="82" width="86" height="6" rx="999" fill="#1e293b"/>
+    <rect x="132" y="82" width="46" height="6" rx="999" fill="#38bdf8">
+      <animate attributeName="width" values="24;74;50;68;24" dur="6.6s" repeatCount="indefinite"/>
     </rect>
 
-    <rect x="190" y="74" width="70" height="6" rx="999" fill="#1e293b"/>
-    <rect x="190" y="74" width="52" height="6" rx="999" fill="#a78bfa">
-      <animate attributeName="width" values="26;60;48;56;26" dur="6.5s" repeatCount="indefinite"/>
+    <rect x="236" y="82" width="86" height="6" rx="999" fill="#1e293b"/>
+    <rect x="236" y="82" width="52" height="6" rx="999" fill="#a78bfa">
+      <animate attributeName="width" values="26;76;54;70;26" dur="7.4s" repeatCount="indefinite"/>
     </rect>
   </g>
 
-  <!-- 微細な粒子 -->
-  <g fill="#e2e8f0" opacity="0.32">
-    <circle cx="690" cy="70" r="1.2">
-      <animate attributeName="opacity" values="0.15;0.45;0.15" dur="3.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="740" cy="112" r="1.1">
-      <animate attributeName="opacity" values="0.12;0.4;0.12" dur="4.3s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="1110" cy="78" r="1.4">
-      <animate attributeName="opacity" values="0.1;0.45;0.1" dur="4.9s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="1030" cy="258" r="1.3">
-      <animate attributeName="opacity" values="0.14;0.42;0.14" dur="3.9s" repeatCount="indefinite"/>
-    </circle>
+  <!-- 粒子: 密度は控えめにして上質感を維持 -->
+  <g fill="#dbeafe" opacity="0.30">
+    <circle cx="682" cy="76" r="1.2"><animate attributeName="opacity" values="0.12;0.42;0.12" dur="4.2s" repeatCount="indefinite"/></circle>
+    <circle cx="738" cy="118" r="1.0"><animate attributeName="opacity" values="0.1;0.38;0.1" dur="5.1s" repeatCount="indefinite"/></circle>
+    <circle cx="1118" cy="88" r="1.3"><animate attributeName="opacity" values="0.14;0.44;0.14" dur="4.8s" repeatCount="indefinite"/></circle>
+    <circle cx="1038" cy="284" r="1.2"><animate attributeName="opacity" values="0.1;0.4;0.1" dur="4.5s" repeatCount="indefinite"/></circle>
   </g>
 </svg>
