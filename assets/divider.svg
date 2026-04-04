@@ -2,45 +2,56 @@
 <!--
   =========================================
   divider.svg
-  セクション区切り用の細いアニメーションライン
-  - READMEの区切りまで自作にすることでテンプレ感を消す
-  - 主張しすぎない細い光だけを動かす
+  READMEのセクション間をつなぐ、細いシグナルライン
+
+  目的:
+  - 単純な罫線ではなく世界観の一部として機能させる
+  - 主張を抑えつつ、視線を次セクションへ滑らせる
+  - hero.svg と同系統の色・質感で統一感を出す
   =========================================
 -->
-<svg width="1200" height="36" viewBox="0 0 1200 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="animated divider">
+<svg width="1200" height="40" viewBox="0 0 1200 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="section divider">
   <defs>
-    <linearGradient id="base" x1="0" y1="18" x2="1200" y2="18" gradientUnits="userSpaceOnUse">
+    <!-- ベースライン: 中央がわずかに明るい -->
+    <linearGradient id="line-base" x1="0" y1="20" x2="1200" y2="20" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
-      <stop offset="25%" stop-color="#334155" stop-opacity="0.3"/>
-      <stop offset="50%" stop-color="#475569" stop-opacity="0.45"/>
-      <stop offset="75%" stop-color="#334155" stop-opacity="0.3"/>
+      <stop offset="22%" stop-color="#334155" stop-opacity="0.26"/>
+      <stop offset="50%" stop-color="#64748b" stop-opacity="0.5"/>
+      <stop offset="78%" stop-color="#334155" stop-opacity="0.26"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </linearGradient>
 
-    <linearGradient id="pulse" x1="0" y1="18" x2="220" y2="18" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    <!-- 可動ハイライト: 青→紫→青 -->
+    <linearGradient id="line-pulse" x1="0" y1="20" x2="260" y2="20" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0"/>
+      <stop offset="48%" stop-color="#a78bfa" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0"/>
     </linearGradient>
 
-    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="6"/>
+    <!-- 柔らかい発光 -->
+    <filter id="line-glow" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="5"/>
     </filter>
   </defs>
 
   <!-- ベースライン -->
-  <rect x="60" y="17" width="1080" height="2" rx="999" fill="url(#base)"/>
+  <rect x="72" y="19" width="1056" height="2" rx="999" fill="url(#line-base)"/>
 
-  <!-- 動く光 -->
+  <!-- 左右から中央へ向かう薄い補助ライン -->
+  <rect x="72" y="19" width="248" height="1" rx="999" fill="#60a5fa" opacity="0.28"/>
+  <rect x="880" y="19" width="248" height="1" rx="999" fill="#a78bfa" opacity="0.28"/>
+
+  <!-- 往復するシグナル -->
+  <rect x="120" y="17" width="260" height="6" rx="999" fill="url(#line-pulse)" filter="url(#line-glow)">
+    <animate attributeName="x" values="72;868;72" dur="8.6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- 中央ノード -->
   <g>
-    <rect x="120" y="16" width="220" height="4" rx="999" fill="url(#pulse)" filter="url(#glow)">
-      <animate attributeName="x" values="60;920;60" dur="7s" repeatCount="indefinite"/>
-    </rect>
+    <circle cx="600" cy="20" r="2.1" fill="#a78bfa">
+      <animate attributeName="r" values="1.6;2.7;1.6" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.45;1;0.45" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="20" r="7" fill="#a78bfa" opacity="0.18" filter="url(#line-glow)"/>
   </g>
-
-  <!-- 中央の小さい光点 -->
-  <circle cx="600" cy="18" r="2.2" fill="#8b5cf6">
-    <animate attributeName="r" values="1.6;2.6;1.6" dur="2.4s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.45;1;0.45" dur="2.4s" repeatCount="indefinite"/>
-  </circle>
 </svg>
