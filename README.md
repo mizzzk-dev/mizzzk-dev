@@ -120,6 +120,13 @@ Go / PostgreSQL を中心にしたバックエンド基盤ライン。
   <sub>Stats / Trophy は主役ではなく、日々の継続を補助的に示すセクションとして配置しています。</sub>
 </p>
 
+### Signal が表示されないときのチェック
+
+- プロフィール README は **`ユーザー名/ユーザー名`**（例: `mizzzk-dev/mizzzk-dev`）の **Public** リポジトリに配置する  
+- 反映まで数分〜十数分かかることがあるため、しばらく待って再読み込みする  
+- `github-readme-stats` / `github-profile-trophy` は外部サービスのため、一時的に画像が表示されないことがある  
+- キャッシュ回避したい場合は、URL の末尾に `&v=2` のようなクエリを追加して更新を試す  
+
 <p align="center">
   <img src="./assets/divider.svg" width="100%" alt="section divider" />
 </p>
