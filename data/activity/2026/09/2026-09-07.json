@@ -5,11 +5,47 @@
   "scope": "public",
   "github_login": "mizzz-ivr",
   "metrics": {
-    "commits": 0,
-    "prs_opened": 0,
-    "issues_created": 0,
+    "commits": 6,
+    "prs_opened": 1,
+    "issues_created": 1,
     "issues_completed": 0
   },
-  "activity": [],
-  "generated_at": "2026-09-07T00:09:12+09:00"
+  "activity": [
+    {
+      "type": "commit",
+      "repo": "mizzz-ivr/tech-writing",
+      "title": "Merge pull request #85 from mizzz-ivr/fix/note-first-article-readability",
+      "url": "https://github.com/mizzz-ivr/tech-writing/commit/a53d2cad0344737002243796d8871b90f8d25109",
+      "at": "2026-09-07T12:57:34.000+09:00"
+    },
+    {
+      "type": "commit",
+      "repo": "ivRooom/Herta",
+      "title": "Merge pull request #375 from ivRooom/fix/373-detailed-output-budget  fix(ai): detailed会話へrequest",
+      "url": "https://github.com/ivRooom/Herta/commit/bb5dbc3f44d8bcb0af2b33bca5f779246a549cb6",
+      "at": "2026-09-07T12:55:53.000+09:00"
+    },
+    {
+      "type": "commit",
+      "repo": "mizzz-ivr/tech-writing",
+      "title": "docs(note): document Markdown table compatibility",
+      "url": "https://github.com/mizzz-ivr/tech-writing/commit/242b9afcd82149ac651a7e4c2bd07e9671580ffe",
+      "at": "2026-09-07T12:54:43.000+09:00"
+    },
+    {
+      "type": "commit",
+      "repo": "mizzz-ivr/tech-writing",
+      "title": "test(note): cover Markdown table compatibility warning",
+      "url": "https://github.com/mizzz-ivr/tech-writing/commit/5d98eb806df2fa8932b64b6dbc5beef68dd095b9",
+      "at": "2026-09-07T12:54:17.000+09:00"
+    },
+    {
+      "type": "commit",
+      "repo": "mizzz-ivr/tech-writing",
+      "title": "feat(note): warn about unsupported Markdown tables",
+      "url": "https://github.com/mizzz-ivr/tech-writing/commit/c467a538d2658a69edc074f388fb30b152b996f4",
+      "at": "2026-09-07T12:54:01.000+09:00"
+    }
+  ],
+  "generated_at": "2026-09-07T13:42:33+09:00"
 }

@@ -5,12 +5,19 @@
   "scope": "public",
   "github_login": "mizzz-ivr",
   "metrics": {
-    "commits": 7,
+    "commits": 8,
     "prs_opened": 0,
     "issues_created": 0,
     "issues_completed": 1
   },
   "activity": [
+    {
+      "type": "commit",
+      "repo": "ivRooom/Herta",
+      "title": "Merge main into fix/373-detailed-output-budget",
+      "url": "https://github.com/ivRooom/Herta/commit/d58906230d4487afa265e85a651735146ffe4848",
+      "at": "2026-09-06T22:00:46.000+09:00"
+    },
     {
       "type": "commit",
       "repo": "ivRooom/Herta",
@@ -38,14 +45,7 @@
       "title": "test(studio): verify picker keyboard and focus regressions",
       "url": "https://github.com/ivRooom/Herta/commit/24f79b18870e671fa53c6615fc26d0e94da756e3",
       "at": "2026-09-06T11:31:57.000+09:00"
-    },
-    {
-      "type": "commit",
-      "repo": "ivRooom/Herta",
-      "title": "test(studio): cover channel and emoji picker regressions",
-      "url": "https://github.com/ivRooom/Herta/commit/60c4683af6ae66b80cd7401beabb36281502077d",
-      "at": "2026-09-06T11:31:40.000+09:00"
     }
   ],
-  "generated_at": "2026-09-07T00:09:12+09:00"
+  "generated_at": "2026-09-07T13:42:33+09:00"
 }
