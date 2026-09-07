@@ -22,21 +22,21 @@
     "last_activity_at": "2026-09-07T03:55:54Z",
     "share": 14,
     "ci": {
-      "label": "ATTENTION",
-      "symbol": "!",
+      "label": "MIXED",
+      "symbol": "◐",
       "window_days": 7,
       "total_runs": 10,
       "evaluated": 10,
-      "passed": 6,
-      "failed": 4,
+      "passed": 8,
+      "failed": 2,
       "ignored": 0,
-      "pass_rate": 60,
+      "pass_rate": 80,
       "latest_conclusion": "success"
     },
     "health": {
-      "label": "ATTENTION",
-      "symbol": "!",
-      "reason": "recent CI needs attention"
+      "label": "WATCH",
+      "symbol": "◐",
+      "reason": "recent CI is mixed"
     },
     "stack": []
   },
@@ -99,21 +99,21 @@
       "last_activity_at": "2026-09-07T03:55:54Z",
       "share": 14,
       "ci": {
-        "label": "ATTENTION",
-        "symbol": "!",
+        "label": "MIXED",
+        "symbol": "◐",
         "window_days": 7,
         "total_runs": 10,
         "evaluated": 10,
-        "passed": 6,
-        "failed": 4,
+        "passed": 8,
+        "failed": 2,
         "ignored": 0,
-        "pass_rate": 60,
+        "pass_rate": 80,
         "latest_conclusion": "success"
       },
       "health": {
-        "label": "ATTENTION",
-        "symbol": "!",
-        "reason": "recent CI needs attention"
+        "label": "WATCH",
+        "symbol": "◐",
+        "reason": "recent CI is mixed"
       }
     },
     {
@@ -157,16 +157,16 @@
       "at": "2026-09-07T03:55:53Z"
     }
   ],
-  "generated_at": "2026-09-07T18:45:15+09:00",
+  "generated_at": "2026-09-07T18:46:01+09:00",
   "ci_signal": {
-    "label": "ATTENTION",
-    "symbol": "!",
+    "label": "MIXED",
+    "symbol": "◐",
     "window_days": 7,
     "evaluated": 30,
-    "passed": 24,
-    "failed": 6,
+    "passed": 26,
+    "failed": 4,
     "ignored": 0,
-    "pass_rate": 80,
+    "pass_rate": 87,
     "repos_with_signal": 3
   },
   "dev_recap": {
