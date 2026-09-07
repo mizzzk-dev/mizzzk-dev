@@ -7,7 +7,7 @@
   "status": {
     "label": "BUILDING",
     "symbol": "●",
-    "last_activity_at": "2026-09-07T03:54:58Z"
+    "last_activity_at": "2026-09-07T03:57:35Z"
   },
   "code_weather": {
     "label": "REST DAY",
@@ -68,8 +68,23 @@
     }
   ],
   "now_building": [],
-  "activity_stream": [],
-  "generated_at": "2026-09-07T12:55:11+09:00",
+  "activity_stream": [
+    {
+      "label": "PUSH",
+      "repo": "ivRooom/Herta",
+      "title": "1 commit pushed to main",
+      "url": "https://github.com/ivRooom/Herta/commits",
+      "at": "2026-09-07T03:55:54Z"
+    },
+    {
+      "label": "PR",
+      "repo": "ivRooom/Herta",
+      "title": "PR merged #375",
+      "url": "https://github.com/ivRooom/Herta",
+      "at": "2026-09-07T03:55:53Z"
+    }
+  ],
+  "generated_at": "2026-09-07T13:00:28+09:00",
   "ci_signal": {
     "label": "NO SIGNAL",
     "symbol": "○",
