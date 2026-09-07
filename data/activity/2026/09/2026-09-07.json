@@ -5,12 +5,26 @@
   "scope": "public",
   "github_login": "mizzz-ivr",
   "metrics": {
-    "commits": 6,
-    "prs_opened": 1,
+    "commits": 8,
+    "prs_opened": 2,
     "issues_created": 1,
     "issues_completed": 0
   },
   "activity": [
+    {
+      "type": "commit",
+      "repo": "ivRooom/ivrm-dashboard",
+      "title": "Issue #117: Restore Test 30日SLAのread modelを修正 (#119)  Restore Test evidenceを実際にテストしたRunへ保持したまま、B",
+      "url": "https://github.com/ivRooom/ivrm-dashboard/commit/013c7d4168a608a0665be5e1937957f336ae35af",
+      "at": "2026-09-07T19:49:04.000+09:00"
+    },
+    {
+      "type": "commit",
+      "repo": "mizzz-ivr/tech-writing",
+      "title": "docs(zenn): reshape personal PR/CI article around story",
+      "url": "https://github.com/mizzz-ivr/tech-writing/commit/9f256fbd855610c32aaf2715625bb083c6f479d3",
+      "at": "2026-09-07T19:33:42.000+09:00"
+    },
     {
       "type": "commit",
       "repo": "mizzz-ivr/tech-writing",
@@ -31,21 +45,7 @@
       "title": "docs(note): document Markdown table compatibility",
       "url": "https://github.com/mizzz-ivr/tech-writing/commit/242b9afcd82149ac651a7e4c2bd07e9671580ffe",
       "at": "2026-09-07T12:54:43.000+09:00"
-    },
-    {
-      "type": "commit",
-      "repo": "mizzz-ivr/tech-writing",
-      "title": "test(note): cover Markdown table compatibility warning",
-      "url": "https://github.com/mizzz-ivr/tech-writing/commit/5d98eb806df2fa8932b64b6dbc5beef68dd095b9",
-      "at": "2026-09-07T12:54:17.000+09:00"
-    },
-    {
-      "type": "commit",
-      "repo": "mizzz-ivr/tech-writing",
-      "title": "feat(note): warn about unsupported Markdown tables",
-      "url": "https://github.com/mizzz-ivr/tech-writing/commit/c467a538d2658a69edc074f388fb30b152b996f4",
-      "at": "2026-09-07T12:54:01.000+09:00"
     }
   ],
-  "generated_at": "2026-09-07T13:42:33+09:00"
+  "generated_at": "2026-09-07T21:09:14+09:00"
 }
