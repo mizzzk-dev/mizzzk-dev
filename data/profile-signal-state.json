@@ -7,7 +7,7 @@
   "status": {
     "label": "BUILDING",
     "symbol": "●",
-    "last_activity_at": "2026-09-07T10:49:05Z"
+    "last_activity_at": "2026-09-07T10:51:05Z"
   },
   "code_weather": {
     "label": "ACTIVE",
@@ -16,29 +16,17 @@
   "streak": 14,
   "activity_total": 8,
   "current_focus": {
-    "repo": "ivRooom/Herta",
-    "score": 2,
-    "events": 2,
-    "last_activity_at": "2026-09-07T03:55:54Z",
-    "share": 14,
-    "ci": {
-      "label": "MIXED",
-      "symbol": "◐",
-      "window_days": 7,
-      "total_runs": 10,
-      "evaluated": 10,
-      "passed": 8,
-      "failed": 2,
-      "ignored": 0,
-      "pass_rate": 80,
-      "latest_conclusion": "success"
-    },
-    "health": {
-      "label": "WATCH",
-      "symbol": "◐",
-      "reason": "recent CI is mixed"
-    },
-    "stack": []
+    "repo": "ivRooom/ivrm-dashboard",
+    "score": 11,
+    "events": 8,
+    "last_activity_at": "2026-09-07T10:51:05Z",
+    "share": 46,
+    "stack": [
+      "TypeScript",
+      "PLpgSQL",
+      "CSS",
+      "Python"
+    ]
   },
   "dev_pulse": [
     {
@@ -171,7 +159,7 @@
       "at": "2026-09-07T10:45:03Z"
     }
   ],
-  "generated_at": "2026-09-07T19:50:13+09:00",
+  "generated_at": "2026-09-07T19:55:14+09:00",
   "ci_signal": {
     "label": "MIXED",
     "symbol": "◐",
