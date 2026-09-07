@@ -5,11 +5,47 @@
   "scope": "public",
   "github_login": "mizzz-ivr",
   "metrics": {
-    "commits": 0,
-    "prs_opened": 0,
+    "commits": 3,
+    "prs_opened": 3,
     "issues_created": 0,
     "issues_completed": 0
   },
-  "activity": [],
-  "generated_at": "2026-09-08T00:09:16+09:00"
+  "activity": [
+    {
+      "type": "commit",
+      "repo": "mizzz-ivr/tech-writing",
+      "title": "fix(analytics): Zenn公開記事の二重計上を解消 (#88)",
+      "url": "https://github.com/mizzz-ivr/tech-writing/commit/e21140aaa7d919f9a2110904515c16494097cca6",
+      "at": "2026-09-08T06:35:38.000+09:00"
+    },
+    {
+      "type": "commit",
+      "repo": "mizzz-ivr/tech-writing",
+      "title": "chore(zenn): 公開済みPR/CI記事を記録 (#87)",
+      "url": "https://github.com/mizzz-ivr/tech-writing/commit/2ca1d355420ebc41a3fb616d03647dfa903e8487",
+      "at": "2026-09-08T06:32:44.000+09:00"
+    },
+    {
+      "type": "commit",
+      "repo": "mizzz-ivr/tech-writing",
+      "title": "publish(zenn): 個人開発のPR/CI記事を公開 (#86)",
+      "url": "https://github.com/mizzz-ivr/tech-writing/commit/6b7577617088390fd79abc30e9fd50caa6cce2e0",
+      "at": "2026-09-08T06:25:45.000+09:00"
+    },
+    {
+      "type": "pr",
+      "repo": "mizzz-ivr/tech-writing",
+      "title": "PR #88 fix(analytics): Zenn公開記事の二重計上を解消",
+      "url": "https://github.com/mizzz-ivr/tech-writing/pull/88",
+      "at": "2026-09-07T21:34:48Z"
+    },
+    {
+      "type": "pr",
+      "repo": "mizzz-ivr/tech-writing",
+      "title": "PR #87 chore(zenn): 公開済みPR/CI記事を記録",
+      "url": "https://github.com/mizzz-ivr/tech-writing/pull/87",
+      "at": "2026-09-07T21:31:54Z"
+    }
+  ],
+  "generated_at": "2026-09-08T07:06:36+09:00"
 }
